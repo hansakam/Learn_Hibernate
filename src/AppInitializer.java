@@ -50,6 +50,11 @@ public class AppInitializer {
         session.delete(customer);
          */
 
+        //second step for delete customer
+
+        Customer customer1 = session.get(Customer.class, "c001");
+                session.delete(customer1);
+
         transaction.commit();
 
         session.close();
