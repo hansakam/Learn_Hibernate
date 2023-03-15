@@ -6,7 +6,7 @@
   <session-factory>
     <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property><!--ape driver class eke path eka dena eka thamai me krnne-->
     <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property><!--me dialect  ekata kiynna ona api use krna Mysql version eka mkdda kiyla-->
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_module</property><!--database url eke name eka dena eka tamai meken krnne-->
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_module?createDatabaseIfNotExist=true</property><!--database url eke name eka dena eka tamai meken krnne-->
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">1234</property>
     <property name="hibernate.show_sql">true</property><!--ape code eke Query ekk run wnawnm  e run wena query eka pennanne consoul eke  menna me property eka nisa-->

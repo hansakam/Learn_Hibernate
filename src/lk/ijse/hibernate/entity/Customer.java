@@ -12,7 +12,7 @@ import javax.persistence.Id;
 public class Customer {
     @Id
     private String id;
-    @Column(name ="Customer_Name")
+    @Column(name ="Customer_Name")//change to row name
     private String name;
     private String address;
     private double salary;
