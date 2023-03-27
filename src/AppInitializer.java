@@ -29,9 +29,9 @@ public class AppInitializer {
         //transaction begin
         Transaction transaction = session.beginTransaction();
 
-      //  session.save(c2);
+        session.save(c1);
 
-       // session.update(c1);
+     //session.update(c1);
 
         //for getting one customer
 
@@ -51,9 +51,10 @@ public class AppInitializer {
          */
 
         //second step for delete customer
+      /*  Customer customer1 = session.get(Customer.class, "c002");
+                session.delete(customer1);*/
 
-        Customer customer1 = session.get(Customer.class, "c001");
-                session.delete(customer1);
+      //  session.save(c1);
 
         transaction.commit();
 

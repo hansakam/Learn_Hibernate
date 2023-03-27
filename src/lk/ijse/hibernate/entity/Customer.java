@@ -1,8 +1,11 @@
 package lk.ijse.hibernate.entity;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Date;
 
 /**
  * @author :Hansaka Malshan
@@ -16,6 +19,8 @@ public class Customer {
     private String name;
     private String address;
     private double salary;
+    @CreationTimestamp
+    private Date date;
 
     public Customer() {
     }
