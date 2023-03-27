@@ -4,39 +4,43 @@
  */
 package lk.ijse.hibernate.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
 public class Laptop {
-    private String id;
-    private String name;
+    private String LId;
+    private String Description;
 
     public Laptop() {
     }
 
-    public Laptop(String id, String name) {
-        this.id = id;
-        this.name = name;
+    public Laptop(String LId, String description) {
+        this.LId = LId;
+        this.Description = description;
     }
 
-    public String getId() {
-        return id;
+    public String getLId() {
+        return LId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setLId(String LId) {
+        this.LId = LId;
     }
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return Description;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        Description = description;
     }
 
     @Override
     public String toString() {
         return "Laptop{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
+                "LId='" + LId + '\'' +
+                ", Description='" + Description + '\'' +
                 '}';
     }
 }
