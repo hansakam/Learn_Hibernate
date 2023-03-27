@@ -6,6 +6,7 @@ package lk.ijse.hibernate.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Pet {
@@ -13,12 +14,25 @@ public class Pet {
     private String pid;
     private String name;
 
+
+
+    @ManyToOne
+    private Owner owner;
+
     public Pet() {
     }
 
-    public Pet(String pid, String name) {
+    public Pet(String pid, String name, Owner owner) {
         this.pid = pid;
         this.name = name;
+        this.owner = owner;
+    }
+    public Owner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
     }
 
     public String getPid() {
