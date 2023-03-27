@@ -6,18 +6,35 @@ package lk.ijse.hibernate.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Laptop {
+    @Id
     private String LId;
     private String Description;
+
+
+
+    @OneToOne
+    private Student student;
 
     public Laptop() {
     }
 
-    public Laptop(String LId, String description) {
+    public Laptop(String LId, String description, Student student) {
         this.LId = LId;
         this.Description = description;
+        this.student = student;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
     }
 
     public String getLId() {
