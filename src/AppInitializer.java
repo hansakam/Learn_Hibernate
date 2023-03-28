@@ -175,6 +175,7 @@ public class AppInitializer {
                s2.setName("ORM");
 
 
+/*
 
                // 1st methodology
 
@@ -195,6 +196,14 @@ public class AppInitializer {
 
         l1.setSubjectList(subjectslist);
         l2.setSubjectList(subjectslist);
+*/
+
+        // 2nd methodology
+
+        l1.getSubjectList().add(s1);
+        l2.getSubjectList().add(s2);
+        s1.getLectureList().add(l1);
+        s1.getLectureList().add(l2);
 
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();

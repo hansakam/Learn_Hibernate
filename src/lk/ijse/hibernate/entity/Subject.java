@@ -16,8 +16,6 @@ public class Subject {
     private String sid;
     private String name;
 
-
-
     @ManyToMany(mappedBy = "subjectList")
     private List<Lecture>lectureList=new ArrayList<>();
 
