@@ -112,7 +112,7 @@ public class AppInitializer {
    //--------------------------------------------------------------------------------
 
                     //one to many
-
+/*
         Owner o1 = new Owner();
                 o1.setOid("O002");
                 o1.setName("Kulasekara");
@@ -129,11 +129,11 @@ public class AppInitializer {
 
         // 1st Methodology add to arry list
 
-     /*   ArrayList<Pet> petList = new ArrayList<>();
+     *//*   ArrayList<Pet> petList = new ArrayList<>();
         petList.add(p1);
         petList.add(p2);
 
-        o1.setPetList(petList);*/
+        o1.setPetList(petList);*//*
 
 
        // 2nd Methodology
@@ -150,13 +150,21 @@ public class AppInitializer {
         session.save(p2);
 
         transaction.commit();
-        session.close();
+       session.close(); */
 
    //------------------------------------------------------------------------------------------------------
 
                 // One to Many
 
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
 
+
+        //session.save();
+
+
+        transaction.commit();
+        session.close();
 
 
     }
