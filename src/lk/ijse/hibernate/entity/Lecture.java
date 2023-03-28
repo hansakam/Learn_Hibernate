@@ -21,9 +21,18 @@ public class Lecture {
     public Lecture() {
     }
 
-    public Lecture(String id, String name) {
+    public Lecture(String id, String name, List<Subject> subjectList) {
         this.id = id;
         this.name = name;
+        this.subjectList = subjectList;
+    }
+
+    public List<Subject> getSubjectList() {
+        return subjectList;
+    }
+
+    public void setSubjectList(List<Subject> subjectList) {
+        this.subjectList = subjectList;
     }
 
     public String getId() {

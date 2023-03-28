@@ -154,13 +154,56 @@ public class AppInitializer {
 
    //------------------------------------------------------------------------------------------------------
 
-                // One to Many
+                // many to Many
+
+        Lecture l1 = new Lecture();
+                l1.setId("l001");
+                l1.setName("Danuja");
+
+        Lecture l2 = new Lecture();
+                l2.setId("l002");
+                l2.setName("Niroth");
+
+
+        Subject s1 = new Subject();
+                s1.setSid("S001");
+                s1.setName("PRF");
+
+
+        Subject s2 = new Subject();
+               s2.setSid("S002");
+               s2.setName("ORM");
+
+
+
+               // 1st methodology
+
+        ArrayList<Subject>subjectslist=new ArrayList<>();
+                 subjectslist.add(s1);
+                 subjectslist.add(s2);
+
+
+
+
+
+        ArrayList<Lecture> LectureList = new ArrayList<>();
+                            LectureList.add(l1);
+                            LectureList.add(l2);
+
+        s1.setLectureList(LectureList);
+        s2.setLectureList(LectureList);
+
+        l1.setSubjectList(subjectslist);
+        l2.setSubjectList(subjectslist);
 
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
 
-        //session.save();
+       // session.save(l1);
+        session.save(l2);
+        /*session.save(s1);
+        session.save(s2);*/
 
 
         transaction.commit();

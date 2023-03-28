@@ -15,15 +15,19 @@ public class Subject {
     @Id
     private String sid;
     private String name;
-    @ManyToMany
+
+
+
+    @ManyToMany(mappedBy = "subjectList")
     private List<Lecture>lectureList=new ArrayList<>();
 
     public Subject() {
     }
 
-    public Subject(String sid, String name) {
+    public Subject(String sid, String name, List<Lecture> lectureList) {
         this.sid = sid;
         this.name = name;
+        this.lectureList = lectureList;
     }
 
     public String getSid() {
@@ -40,6 +44,13 @@ public class Subject {
 
     public void setName(String name) {
         this.name = name;
+    }
+    public List<Lecture> getLectureList() {
+        return lectureList;
+    }
+
+    public void setLectureList(List<Lecture> lectureList) {
+        this.lectureList = lectureList;
     }
 
     @Override
