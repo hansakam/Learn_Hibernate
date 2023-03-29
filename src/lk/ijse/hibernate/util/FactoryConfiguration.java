@@ -22,7 +22,9 @@ public class   FactoryConfiguration {
                 .addAnnotatedClass(Owner.class)
                 .addAnnotatedClass(Pet.class)
                 .addAnnotatedClass(Lecture.class)
-                .addAnnotatedClass(Subject.class);
+                .addAnnotatedClass(Subject.class)
+                .addAnnotatedClass(Owners.class)
+                .addAnnotatedClass(Pets.class);
         sessionFactory = configuration.buildSessionFactory();
     }
     public static FactoryConfiguration getInstance(){
